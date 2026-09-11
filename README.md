@@ -73,7 +73,8 @@ horse-manager-api/
 │   └── uploads/           # Uppladdade bilder (skapas automatiskt)
 ├── Program.cs             # Applikationskonfiguration
 ├── appsettings.json       # Databaskonfiguration
-└── README.md```
+└── README.md
+```
 
 ## Felhantering
 Alla endpoints returnerar lämpliga HTTP-statuskoder:
