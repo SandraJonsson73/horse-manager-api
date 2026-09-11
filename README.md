@@ -24,8 +24,9 @@ ASP.NET Core Web API för registrering och hantering av hästar.
 
 1. **Klona repot** (om du ännu inte gjort det):
    ```powershell
-   cd c:\Users\stall\source\repos\Webbapplikation\horse-manager-api
-   ```
+   https://github.com/SandraJonsson73/horse-manager-api.git
+   cd horse-manager-api
+    ```
 
 2. **Installera dependencies:**
     ```powershell 
