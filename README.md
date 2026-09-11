@@ -61,7 +61,8 @@ Du bör få en tom JSON-array `[]`
     - Bilden sparas i `wwwroot/uploads/` och returnerar `imagePath`
 
 ## Struktur
-`horse-manager-api/
+```text
+horse-manager-api/
 ├── Models/
 │   └── Horse.cs           # Häst-datamodell
 ├── Data/
@@ -72,7 +73,7 @@ Du bör få en tom JSON-array `[]`
 │   └── uploads/           # Uppladdade bilder (skapas automatiskt)
 ├── Program.cs             # Applikationskonfiguration
 ├── appsettings.json       # Databaskonfiguration
-└── README.md`
+└── README.md```
 
 ## Felhantering
 Alla endpoints returnerar lämpliga HTTP-statuskoder:
