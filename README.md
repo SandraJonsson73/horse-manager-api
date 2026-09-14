@@ -39,10 +39,11 @@ ASP.NET Core Web API för registrering och hantering av hästar.
     ```
 
 4. **Verifiera att det fungerar:**
-API lyssnar på `http://localhost:5280` (eller annan port om 5280 är upptagen)
-Gå till `http://localhost:5280/api/horses` i webbläsaren
-Du bör få en tom JSON-array `[]`
-
+ - API lyssnar på `http://localhost:5280` (eller annan port om 5280 är upptagen)
+   - Gå till `http://localhost:5280/api/horses` i webbläsaren
+   - Du bör få en JSON-array med hästar (tom `[]` om databasen är ny)
+   - För att starta med tom databas, ta bort `horses.db`-filen och starta om
+   
 5. **Databasen skapas automatiskt** som `horses.db` i projektets rot
 
 ## API-endpoints
@@ -59,6 +60,22 @@ Du bör få en tom JSON-array `[]`
   - `POST /api/horses/{id}/image` — Ladda upp bild för en häst
     - Accepterar: JPG, PNG, GIF (max 5 MB)
     - Bilden sparas i `wwwroot/uploads/` och returnerar `imagePath`
+
+## Swagger UI — Testa API:et interaktivt
+
+Backend inkluderar Swagger UI för att testa alla endpoints direkt utan att behöva en klient.
+
+### Starta Swagger
+1. Starta backend: `dotnet run`
+2. Öppna webbläsaren: `http://localhost:5280/swagger/index.html`
+
+### Vad du kan göra i Swagger
+- **Visa alla endpoints** med dokumentation
+- **Testa GET, POST, PUT, DELETE** direkt från webbläsaren
+- **Se request/response** för varje endpoint
+- **Prova filuppladdning** till `/api/horses/{id}/image`
+
+Swagger är bara tillgänglig i utvecklingsmiljö (Development), inte i produktion.
 
 ## Struktur
 ```text
