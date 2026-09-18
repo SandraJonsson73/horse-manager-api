@@ -42,7 +42,9 @@ public class HorsesController : ControllerBase
             Name = dto.Name,
             Breed = dto.Breed,
             BirthYear = dto.BirthYear,
-            Owner = dto.Owner
+            Breeder = dto.Breeder,
+            Owner = dto.Owner,
+            Notes = dto.Notes
         };
 
         _context.Horses.Add(horse);
@@ -60,7 +62,9 @@ public class HorsesController : ControllerBase
         horse.Name = dto.Name;
         horse.Breed = dto.Breed;
         horse.BirthYear = dto.BirthYear;
+        horse.Breeder = dto.Breeder;
         horse.Owner = dto.Owner;
+        horse.Notes = dto.Notes;
 
         await _context.SaveChangesAsync();
         return Ok(horse);
@@ -119,7 +123,10 @@ public class CreateHorseDto
     public string Name { get; set; } = string.Empty;
     public string Breed { get; set; } = string.Empty;
     public int BirthYear { get; set; }
+    public string? Breeder { get; set; }
     public string Owner { get; set; } = string.Empty;
+    public string? Notes { get; set; }
+
 }
 
 public class UpdateHorseDto
@@ -127,5 +134,8 @@ public class UpdateHorseDto
     public string Name { get; set; } = string.Empty;
     public string Breed { get; set; } = string.Empty;
     public int BirthYear { get; set; }
+    public string? Breeder { get; set; }
     public string Owner { get; set; } = string.Empty;
+    public string? Notes { get; set; }
+
 }
