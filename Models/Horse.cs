@@ -10,5 +10,6 @@ public class Horse
     public string Owner { get; set; } = string.Empty;
     public string? ImagePath { get; set; }
     public string? Notes { get; set; }
+    public bool IsCurrent { get; set; } = true;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
