@@ -46,15 +46,15 @@ ASP.NET Core Web API för registrering och hantering av hästar.
    
 5. **Databasen skapas automatiskt** som `horses.db` i projektets rot
 
-## API-endpoints
-**Hästar**
-  - `GET /api/horses` — Hämta alla hästar
-  - `GET /api/horses/{id}` — Hämta en specifik häst
-  - `POST /api/horses` — Skapa en ny häst
-    - Body (JSON):` { "name": "...", "breed": "...", "birthYear": 2020, "owner": "..." }`
-  - `PUT /api/horses/{id}` — Uppdatera en häst
-    - Body (JSON):` { "name": "...", "breed": "...", "birthYear": 2020, "owner": "..." }`
-  - `DELETE /api/horses/{id}` — Ta bort en häst
+### Hästar
+
+- `GET /api/horses` — Hämta alla hästar
+- `GET /api/horses/{id}` — Hämta en specifik häst
+- `POST /api/horses` — Skapa en ny häst
+  - Body (JSON): `{ "name": "...", "breed": "...", "birthYear": 2020, "breeder": "...", "owner": "...", "notes": "...", "isCurrent": true }`
+- `PUT /api/horses/{id}` — Uppdatera en häst
+  - Body (JSON): `{ "name": "...", "breed": "...", "birthYear": 2020, "breeder": "...", "owner": "...", "notes": "...", "isCurrent": true }`
+- `DELETE /api/horses/{id}` — Ta bort en häst
 
 **Filuppladdning**
   - `POST /api/horses/{id}/image` — Ladda upp bild för en häst
