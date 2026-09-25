@@ -8,6 +8,7 @@ public class Horse
     public int BirthYear { get; set; }
     public string? Breeder { get; set; }
     public string Owner { get; set; } = string.Empty;
+    public string? Trainer { get; set; }
     public string? ImagePath { get; set; }
     public string? Notes { get; set; }
     public bool IsCurrent { get; set; } = true;

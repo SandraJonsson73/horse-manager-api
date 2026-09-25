@@ -44,6 +44,7 @@ public class HorsesController : ControllerBase
             BirthYear = dto.BirthYear,
             Breeder = dto.Breeder,
             Owner = dto.Owner,
+            Trainer = dto.Trainer,
             Notes = dto.Notes,
             IsCurrent = dto.IsCurrent
         };
@@ -65,6 +66,7 @@ public class HorsesController : ControllerBase
         horse.BirthYear = dto.BirthYear;
         horse.Breeder = dto.Breeder;
         horse.Owner = dto.Owner;
+        horse.Trainer = dto.Trainer;
         horse.Notes = dto.Notes;
         horse.IsCurrent = dto.IsCurrent;
 
@@ -127,6 +129,7 @@ public class CreateHorseDto
     public int BirthYear { get; set; }
     public string? Breeder { get; set; }
     public string Owner { get; set; } = string.Empty;
+    public string? Trainer { get; set; }
     public string? Notes { get; set; }
     public bool IsCurrent { get; set; } = true;
 
@@ -140,6 +143,8 @@ public class UpdateHorseDto
     public int BirthYear { get; set; }
     public string? Breeder { get; set; }
     public string Owner { get; set; } = string.Empty;
+    public string? Trainer { get; set; }
+
     public string? Notes { get; set; }
     public bool IsCurrent { get; set; } = true;
 
